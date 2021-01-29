@@ -34,30 +34,21 @@ const App = () => {
 };
 
 function HomeScreen({navigation}){
-  let data = {name:"bhanu", email:"bhanu@gmail.com", address:"noida"}
   return(
     <View>
       <Text>
         Home Screen
       </Text>
-      <Button title="go to Details" onPress={()=>navigation.push('Detials', data)}></Button>
+      <Button title="go to Details" onPress={()=>navigation.navigate('Detials')}></Button>
     </View>
   )
 }
 
-function DetailsScreen({route}){
-    let data = route.params;
-
+function DetailsScreen(){
   return(
     <View>
-      <Text style={{fontSize:30}}>
-      {data.name}
-      </Text>
-      <Text style={{fontSize:30}}>
-      {data.email}
-      </Text>
-      <Text style={{fontSize:30}}>
-      {data.address}
+      <Text>
+      Details Screen
       </Text>
     </View>
   )
